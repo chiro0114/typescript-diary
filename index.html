@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>diary</title>
+  </head>
+  <body>
+    <div id="global-container">
+      <template id="form-template">
+        <form id="input-form" action="submit">
+          <label>
+            タイトル
+            <input id="input-title" type="text" />
+          </label>
+          <label>
+            日付
+            <input id="input-date" type="date" />
+          </label>
+          <label>
+            本文
+            <textarea id="input-text" rows="5" cols="25"></textarea>
+          </label>
+          <input type="submit" id="input-submit">
+        </form>
+      </template>
+      <template id="galleries-template">
+        <div id="diary-galleries"></div>
+      </template>
+      <template id="gallery-template">
+        <div class="diary-gallery">
+          <h2 class="diary-title"></h2>
+          <p class="diary-date"></p>
+          <p class="diary-text"></p>
+        </div>
+      </template>
+      <div id="app"></div>
+    </div>
+    <script type="module" src="/src/main.ts" defer></script>
+  </body>
+</html>
